@@ -2,7 +2,8 @@
     "bottlesmostly:block-bamboobottle-brown": "Brown bamboo bottle",
     "bottlesmostly:block-bamboobottle-green": "Green bamboo bottle",
 
-    "bottlesmostly:block-waterskin-crude": "Crude waterskin",
+    "bottlesmostly:block-waterskin-crude-curing": "Crude waterskin (uncured)",
+    "bottlesmostly:block-waterskin-crude-cured": "Crude waterskin",
     "bottlesmostly:block-waterskin-leather-plain": "Waterskin",
     "bottlesmostly:block-waterskin-leather-black": "Black waterskin",
     "bottlesmostly:block-waterskin-leather-blue": "Blue waterskin",

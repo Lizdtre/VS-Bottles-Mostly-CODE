@@ -2,7 +2,7 @@
 	code: "waterskin",
 	classByType:{
 		"waterskin-leather-*": "bottlesmostly.blockLiquidContainerAttachable",
-		"*": "BlockLiquidContainerTopOpened" 
+		"waterskin-crude-cured": "BlockLiquidContainerTopOpened" 
 	}, 
 	variantgroups: [
 		{code: "type", states: ["crude", "leather"]},
@@ -18,7 +18,11 @@
 			"red",
 			"white",
 			"yellow"
-		], combine: "SelectiveMultiply", onVariant: "type"}
+		], combine: "SelectiveMultiply", onVariant: "type"},
+		{code:  "crude", states:  [
+			"cured",
+			"curing"
+		], combine:  "SelectiveMultiply", onVariant:  "type"}
 	],
 
 	shape: {base: "block/waterskin-{type}"},
@@ -31,13 +35,13 @@
 
 
 	behaviors: [
-		{ name: "GroundStorable", properties: { layoutByType: {"waterskin-crude": "Quadrants", "*": "SingleCenter"}, collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } },
+		{ name: "GroundStorable", properties: { layoutByType: {"waterskin-crude-*": "Quadrants", "*": "SingleCenter"}, collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } },
 		{ name: "Unplaceable", }, // The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility
 		{ name: "RightClickPickup"}
 	],
 	attributes: {
 		groundStorageTransformByType: {
-			"waterskin-crude": {
+			"waterskin-crude-*": {
 				origin: { x: 0.5, y: 0, z: 0.5 },
 				scale: 0.85
 			},
@@ -50,15 +54,15 @@
 			origin: { x: 0.5, y: 0, z: 0.5 },
 			scale: 0.75
 		},
-		shelvableByType:{ "waterskin-crude": true, "*": "SingleCenter"},
+		shelvableByType:{ "waterskin-crude-*": true, "*": "SingleCenter"},
 		onshelfTransform: {
 			scale: 0.9
 		},
 		liquidContainerProps: {
-				capacityLitresByType:{"waterskin-crude": 3, "*": 5},
-				transferSizeLitresByType: {"waterskin-crude": 0.3, "*": 0.5},
+				capacityLitresByType:{"waterskin-crude-cured": 3, "waterskin-leather-*": 5},
+				transferSizeLitresByType: {"waterskin-crude-cured": 0.3, "waterskin-leather-*": 0.5},
 				emptyShapeLocByType: {
-					"waterskin-crude": "bottlesmostly:shapes/block/waterskin-crude",
+					"waterskin-crude-cured": "bottlesmostly:shapes/block/waterskin-crude",
 					"*": "bottlesmostly:shapes/block/waterskin-leather"
 				},
 				opaqueContentShapeLoc: "game:shapes/block/basic/nothing",
@@ -92,8 +96,22 @@
 		}
 	},
 	durabilityByType: {
-		"waterskin-crude": 150,
+		"waterskin-crude-cured": 150,
 		"*": 0
+	},
+	transitionablePropsByType: {
+		"waterskin-crude-curing": [
+			{
+				"type": "Cure",
+				"freshHours": { "avg": 0 },
+				"transitionHours": { "avg": 48 },
+				"transitionedStack": {
+					"type": "block",
+					"code": "waterskin-crude-cured"
+				},
+				"transitionRatio": 1
+			}
+		]
 	},
 	doNotRenderAtLod2: true,
 	creativeinventory: { "general": ["*"], "decorative": ["*"] , "bottlesmostly" : ["*"]},
@@ -102,7 +120,10 @@
 	resistance: 1.5,
 	liquidSelectable: 1,
 	lightAbsorption: 1,
-	maxStackSize: 8,
+	maxStackSizeByType: {
+		"waterskin-crude-*": 1,
+		"*": 2
+	},
 	sidesolid: {
 		all: false
 	},

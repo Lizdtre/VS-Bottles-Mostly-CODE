@@ -1,5 +1,5 @@
 [
-    {
+    { // pelt medium
         ingredientPattern: "_r,kp",
         width: 2,
         height: 2,
@@ -23,10 +23,10 @@
         },
         output: {
             type: "block",
-            code: "waterskin-crude"
+            code: "waterskin-crude-cured"
         }
     },
-    {
+    { // pelt large
         ingredientPattern: "_r,kp",
         width: 2,
         height: 2,
@@ -51,10 +51,10 @@
         },
         output: {
             type: "block",
-            code: "waterskin-crude"
+            code: "waterskin-crude-cured"
         }
     },
-    {
+    { // pelt huge
         ingredientPattern: "_r,kp",
         width: 2,
         height: 2,
@@ -79,9 +79,108 @@
         },
         output: {
             type: "block",
-            code: "waterskin-crude"
+            code: "waterskin-crude-cured"
+        }
+    },
+    { // rawhide medium
+        ingredientPattern: "_r,_b,kp",
+        width: 2,
+        height: 3,
+        ingredients: {
+            "r": {
+                type: "item",
+                code: "game:rope"
+            },
+            "b": {
+                type: "item",
+                code: "game:fruit-*",
+                allowedVariants: ["blueberry", "blackcurrant"],
+                quantity: 16
+            },
+            "k": {
+                type: "item",
+                isTool: true,
+                toolDurabilityCost: 10,
+                tags: ["tool-trimming"]
+            },
+            "p": {
+                type: "item",
+                code: "game:hide-raw-*",
+                quantity: 1,
+                tags: ["size-medium"]
+            }
+        },
+        output: {
+            type: "block",
+            code: "waterskin-crude-curing"
+        }
+    },
+    { // rawhide large
+        ingredientPattern: "_r,_b,kp",
+        width: 2,
+        height: 3,
+        ingredients: {
+            "r": {
+                type: "item",
+                code: "game:rope"
+            },
+            "b": {
+                type: "item",
+                code: "game:fruit-*",
+                allowedVariants: ["blueberry", "blackcurrant"],
+                quantity: 16
+            },
+            "k": {
+                type: "item",
+                isTool: true,
+                toolDurabilityCost: 10,
+                tags: ["tool-trimming"]
+            },
+            "p": {
+                type: "item",
+                code: "game:hide-raw-*",
+                quantity: 1,
+                tags: ["size-large"],
+                returnedStack: {type: "item", code: "game:hide-pelt-small"}
+            }
+        },
+        output: {
+            type: "block",
+            code: "waterskin-crude-curing"
+        }
+    },
+    { // rawhide huge
+        ingredientPattern: "_r,_b,kp",
+        width: 2,
+        height: 3,
+        ingredients: {
+            "r": {
+                type: "item",
+                code: "game:rope"
+            },
+            "b": {
+                type: "item",
+                code: "game:fruit-*",
+                allowedVariants: ["blueberry", "blackcurrant"],
+                quantity: 16
+            },
+            "k": {
+                type: "item",
+                isTool: true,
+                toolDurabilityCost: 10,
+                tags: ["tool-trimming"]
+            },
+            "p": {
+                type: "item",
+                code: "game:hide-raw-*",
+                quantity: 1,
+                tags: ["size-huge"],
+                returnedStack: {type: "item", code: "game:hide-pelt-medium"}
+            }
+        },
+        output: {
+            type: "block",
+            code: "waterskin-crude-curing"
         }
     }
-
-
 ]
