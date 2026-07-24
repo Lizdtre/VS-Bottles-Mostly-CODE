@@ -1,0 +1,87 @@
+[
+    {
+        ingredientPattern: "_r,kp",
+        width: 2,
+        height: 2,
+        ingredients: {
+            "r": {
+                type: "item",
+                code: "game:rope"
+            },
+            "k": {
+                type: "item",
+                isTool: true,
+                toolDurabilityCost: 10,
+                tags: ["tool-trimming"]
+            },
+            "p": {
+                type: "item",
+                code: "game:hide-pelt-*",
+                quantity: 1,
+                tags: ["size-medium"]
+            }
+        },
+        output: {
+            type: "block",
+            code: "waterskin-crude"
+        }
+    },
+    {
+        ingredientPattern: "_r,kp",
+        width: 2,
+        height: 2,
+        ingredients: {
+            "r": {
+                type: "item",
+                code: "game:rope"
+            },
+            "k": {
+                type: "item",
+                isTool: true,
+                toolDurabilityCost: 10,
+                tags: ["tool-trimming"]
+            },
+            "p": {
+                type: "item",
+                code: "game:hide-pelt-*",
+                quantity: 1,
+                tags: ["size-large"],
+                returnedStack: {type: "item", code: "game:hide-pelt-small"}
+            }
+        },
+        output: {
+            type: "block",
+            code: "waterskin-crude"
+        }
+    },
+    {
+        ingredientPattern: "_r,kp",
+        width: 2,
+        height: 2,
+        ingredients: {
+            "r": {
+                type: "item",
+                code: "game:rope"
+            },
+            "k": {
+                type: "item",
+                isTool: true,
+                toolDurabilityCost: 10,
+                tags: ["tool-trimming"]
+            },
+            "p": {
+                type: "item",
+                code: "game:hide-pelt-*",
+                quantity: 1,
+                tags: ["size-huge"],
+                returnedStack: {type: "item", code: "game:hide-pelt-medium"}
+            }
+        },
+        output: {
+            type: "block",
+            code: "waterskin-crude"
+        }
+    }
+
+
+]

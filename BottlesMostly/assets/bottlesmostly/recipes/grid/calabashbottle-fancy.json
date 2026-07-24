@@ -1,0 +1,33 @@
+[
+    {
+        ingredientPattern: "kl,wC,_l",
+        width: 2,
+        height: 3,
+        ingredients: {
+            "k": {
+                type: "item",
+                isTool: true,
+                tags: ["tool-trimming"]
+            },
+            "l": {
+                type: "item",
+                code: "game:leather-normal-*",
+                name: "color"
+            },
+            "w": {
+                type: "item",
+                code: "game:beeswax",
+                quantity: 2
+            },
+            "C": {
+                type: "block",
+                code: "calabashbottle-*-sealed",
+                name: "type"
+            }
+        },
+        output: {
+            type: "block",
+            code: "calabashbottle-{type}-fancy-{color}"
+        }
+    }
+]

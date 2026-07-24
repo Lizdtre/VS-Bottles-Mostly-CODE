@@ -1,0 +1,26 @@
+{
+    ingredientPattern: "_s,kb",
+    width: 2,
+    height: 2,
+    ingredients: {
+        "s": {
+            type: "item",
+            code: "game:stick"
+        },
+        "k": {
+            type: "item",
+            code: "game:knife-*",
+            isTool: true,
+            toolDurabilityCost: 10
+        },
+        "b": {
+            type: "block",
+            code: "game:sapling-*bamboo-free",
+            name: "color"
+        }
+    },
+    output: {
+        type: "block",
+        code: "bamboobottle-{color}"
+    }
+}

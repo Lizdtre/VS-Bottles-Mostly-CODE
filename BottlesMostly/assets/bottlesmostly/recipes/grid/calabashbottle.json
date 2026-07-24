@@ -1,0 +1,42 @@
+[
+    {
+        ingredientPattern: "_s_,_t_,kCr",
+        width: 3,
+        height: 3,
+        ingredients: {
+            "s": {
+                type: "item",
+                code: "game:stick"
+            },
+            "t": {
+                type: "item",
+                code: "game:stone-*",
+                name: "stonetype",
+                allowedVariants: ["claystone", "limestone", "tuff", "chert", "shale", "slate", "basalt", "scoria", "suevite", "granite", "bauxite", "obsidian", "andesite", "phyllite", "kimberlite", "peridotite", "travertine", "*marble", "conglomerate"],
+                returnedStack: {
+                    type: "item",
+                    code: "game:stone-{stonetype}",
+                }
+            },
+            "k": {
+                type: "item",
+                code: "game:knife-*",
+                isTool: true
+            },
+            "C": {
+                type: "block",
+                code: "calabash-*-dry",
+                name: "type",
+                skipVariants: ["small"]
+            },
+            "r": {
+                type: "item",
+                code: "game:rope"
+            }
+        },
+        output: {
+            type: "block",
+            code: "calabashbottle-{type}-strung"
+        }
+    }
+]

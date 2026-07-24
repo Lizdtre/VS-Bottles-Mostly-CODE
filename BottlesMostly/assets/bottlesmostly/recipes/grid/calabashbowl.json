@@ -1,0 +1,76 @@
+[
+    {
+        ingredientPattern: "w,b,k",
+        width: 1,
+        height: 3,
+        ingredients: {
+            "w": {
+                type: "item",
+                code: "game:beeswax"
+            },
+            "b": {
+                type: "block",
+                code: "calabash-squat-dry",
+            },
+            "k": {
+                type: "item",
+                code: "game:knife-*",
+                isTool: true,
+                toolDurabilityCost: 5
+            }
+        },
+        output: {
+            type: "block",
+            code: "calabashbowl-empty"
+        },
+        recipeGroup: 1
+    },
+    { // from crude bottle
+        ingredientPattern: "w,b,k",
+        width: 1,
+        height: 3,
+        ingredients: {
+            "w": {
+                type: "item",
+                code: "game:beeswax"
+            },
+            "b": {
+                type: "block",
+                code: "calabashbottle-squat-strung",
+            },
+            "k": {
+                type: "item",
+                code: "game:knife-*",
+                isTool: true,
+                toolDurabilityCost: 6
+            }
+        },
+        output: {
+            type: "block",
+            code: "calabashbowl-empty"
+        },
+        recipeGroup: 2
+    },
+    { // from sealed bottle
+        ingredientPattern: "b,k",
+        width: 1,
+        height: 2,
+        ingredients: {
+            "b": {
+                type: "block",
+                code: "calabashbottle-squat-sealed",
+            },
+            "k": {
+                type: "item",
+                code: "game:knife-*",
+                isTool: true,
+                toolDurabilityCost: 6
+            }
+        },
+        output: {
+            type: "block",
+            code: "calabashbowl-empty"
+        },
+        recipeGroup: 3
+    },
+]

@@ -1,0 +1,39 @@
+[
+    {
+        ingredientPattern: "ks_,LrL,_l_",
+        width: 3,
+        height: 3,
+        ingredients: {
+            "k": {
+                type: "item",
+                code: "game:knife-*",
+                isTool: true,
+                toolDurabilityCost: 10
+            },
+            "s": {
+                type: "item",
+                code: "game:stick"
+            },
+            "L": {
+                type: "item",
+                code: "game:leather-normal-*",
+                name: "color",
+                quantity: 3
+            },
+            "l": {
+                type: "item",
+                code: "game:leather-normal-*",
+                name: "color",
+                quantity: 2
+            },
+            "r": {
+                type: "item",
+                code: "game:resin"
+            }
+        },
+        output: {
+            type: "block",
+            code: "waterskin-leather-{color}"
+        }
+    }
+]

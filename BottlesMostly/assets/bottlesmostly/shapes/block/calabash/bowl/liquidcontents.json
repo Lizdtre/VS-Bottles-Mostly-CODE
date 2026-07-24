@@ -1,0 +1,28 @@
+{
+	"editor": {
+		"collapsedPaths": ",Root/base/w_high,Root/Cube2/e_low,Root/Cube2/e_high,Root/Cube2/n_high,Root/base/e_high,Root/Cube2/s_low,Root/Cube2/s_high,Root/Cube2/w_low,Root/Cube2/n_low,Root/base/n_high,Root/base/s_high",
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Content",
+			"from": [ 5.75, 1.0, 5.75 ],
+			"to": [ 10.25, 1.2, 10.25 ],
+			"rotationOrigin": [ 5.65, 1.0, 5.25 ],
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 4.5, 0.5 ], "enabled": false },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 4.5, 0.5 ], "enabled": false },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 4.5, 0.5 ], "enabled": false },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 4.5, 0.5 ], "enabled": false },
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 4.5, 4.5 ] },
+				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 4.5, 4.5 ], "enabled": false }
+			}
+		}
+	]}

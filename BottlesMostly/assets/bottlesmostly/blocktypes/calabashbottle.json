@@ -1,0 +1,124 @@
+{
+	code: "calabashbottle",
+	class: "BlockLiquidContainerTopOpened",
+	variantgroups: [
+		{code: "type", states: ["squat", "tall", "even"]},
+		{code: "construction", states: [
+			"strung",
+			"sealed",
+			"fancy"
+		]},
+		{code: "fancy", states: [
+			"blue",
+			"gray",
+			"black",
+			"green",
+			"orange",
+			"pink",
+			"plain",
+			"purple",
+			"red",
+			"white",
+			"yellow"
+		], combine: "SelectiveMultiply", onVariant: "construction"}
+	],
+
+	shapeByType: {
+		"*-fancy-*": {base: "block/calabash/bottle/{type}-fancy"},
+		"*": {base: "block/calabash/bottle/{type}"},
+	},
+	texturesByType: {
+		"*-fancy-*": {
+			leather: {base: "game:block/leather/{fancy}"}
+		},
+		"*": {
+			leather: {base: "block/calabash-dry"}
+		}
+	},
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: "Quadrants", collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } },
+		{ name: "Unplaceable", }, // The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility
+		{ name: "RightClickPickup"}
+	],
+	attributes: {
+		groundStorageTransform: {
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.85
+		},
+		onDisplayTransform: {
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.75
+		},
+		shelvable: true,
+		liquidContainerProps: {
+				capacityLitres: 3,
+				transferSizeLitres: 0.3,
+				emptyShapeLocByType: {
+					"*-fancy-*": "shapes/block/calabash/bottle/{type}-fancy",
+					"*": "shapes/block/calabash/bottle/{type}"
+				},
+				opaqueContentShapeLoc: "game:shapes/block/basic/nothing",
+				liquidContentShapeLoc: "game:shapes/block/basic/nothing",
+				liquidMaxYTranslate: 0.05
+		},
+        displayable: {
+            shelf: {
+				size: { width: 6, height: 10, length: 6 },
+				randYRotAngle: 10
+            }
+        },
+        handbook: {
+			groupBy: ["calabashbottle-{type}-*"]
+		}
+	},
+	doNotRenderAtLod2: true,
+	creativeinventory: { "general": ["*"], "decorative": ["*"] , "bottlesmostly" : ["*"]},
+	durabilityByType: {
+		"calabashbottle-*-strung": 100,
+		"*": 0
+	},
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	liquidSelectable: 1,
+	lightAbsorption: 1,
+	maxStackSizeByType: {
+		"*-strung": 1,
+		"*": 8
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	emitsideao: {
+		all: false
+	},
+	collisionbox: {
+		x1: 0.3125, y1: 0, z1: 0.3125,
+		x2: 0.6875, y2: 0.4375, z2: 0.6875
+	},
+	selectionbox: {
+		x1: 0.3125, y1: 0, z1: 0.3125,
+		x2: 0.6875, y2: 0.4375, z2: 0.6875
+	},
+	tpHandTransformByType: {
+		"*": {
+			translation: { x: -1.02, y: -0.71, z: -0.73 },
+			rotation: { x: 96, y: -63, z: -87 },
+			scale: 0.7
+		}
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 3.2
+	},
+	guiTransform: {
+		translation: { x: 0, y: -2.1, z: 0 },
+		origin: { x: 0.5, y: 0.3, z: 0.5 },
+		scale: 2.35
+	}
+
+}

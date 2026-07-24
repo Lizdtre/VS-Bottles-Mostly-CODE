@@ -1,0 +1,69 @@
+[
+        { // Alcohol bandages
+                ingredientPattern: "WB",
+                ingredients: {
+                        "W": {
+                                type: "block",
+                                code: "calabashbottle-*"
+                        },
+                        "B": {
+                                type: "item",
+                                code: "game:bandage-clean"
+                        }
+                },
+                width: 2,
+                height: 1,
+                recipeGroup: 1,
+                attributes: {
+                        liquidContainerProps: {
+                                requiresContent: { type: "item", code: "game:alcoholportion" },
+                                requiresLitres: 0.2
+                        }
+                },
+                shapeless: true,
+                output: { type: "item", code: "game:bandage-alcoholed"  }
+        },
+        { // Oil lamps
+                ingredientPattern: "BF",
+                ingredients: {
+                        "B": { type: "block", code: "game:oillamp-genie-*-fired", name: "color" },
+                        "F": { type: "block", code: "calabashbottle-*" },
+                },
+                attributes: {
+                        liquidContainerProps: {
+                                requiresContent: { type: "item", code: "game:oilportion-olive" },
+                                requiresLitres: 0.5
+                        }
+                },
+                width: 2,
+                height: 1,
+                shapeless: true,
+                output: { type: "block", code: "game:oillamp-{color}-up"  }
+        },
+        { // Dough
+                ingredientPattern: "WF",
+                ingredients: {
+                        "W": {
+                                type: "block",
+                                code: "calabashbottle-*",
+                recipeAttributes: {
+                    requiresContent: { type: "item", code: "game:waterportion" },
+                    requiresLitres: 1
+                            }
+                        },
+                        "F": {
+                                type: "item",
+                                code: "game:flour-*",
+                                allowedVariants: ["flax", "millet", "rice", "rye", "spelt", "cassava", "amaranth", "sunflower"],
+                                name: "type"
+                        }
+                },
+                width: 2,
+                height: 1,
+                name: "dough",
+                shapeless: true,
+                output: { type: "item", code: "game:dough-{type}"  }
+        }
+
+
+]

@@ -1,0 +1,81 @@
+{
+    code: "calabash",
+    maxStackSize: 16,
+    behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'Quadrants', collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } },
+		{ name: "Unplaceable", },
+		{ name: "RightClickPickup"}
+	],
+	variantGroups: [
+        {code: "type", states: ["small", "even", "tall", "squat"]},
+        {code: "status", states: ["fresh", "dry"]}
+	],
+	shape: {base: "block/calabash/{type}"},
+	textures: {
+        calabash: {base: "block/calabash-{status}"}
+	},
+	attributes: {
+        groundStorageTransform: {
+            origin: { x: 0.5, y: 0, z: 0.5 },
+            scale: 0.85
+        },
+        displayable: {
+            shelfByType: {
+                "*-small": {
+                    size: { width: 4, height: 5, length: 4 },
+                    randYRotAngle: 15
+                },
+                "*": {
+                    size: { width: 6, height: 10, length: 6 },
+                    randYRotAngle: 10
+                }
+            }
+        }
+	},
+	creativeinventory: { "general": ["*"], "decorative": ["*"] , "bottlesmostly" : ["*"]},
+
+	transitionablePropsByType: {
+        "*-fresh": [
+            {
+                "type": "Dry",
+                "freshHours": { "avg": 0 },
+                "transitionHours": { "avg": 144 },
+                "transitionedStack": {
+                    "type": "block",
+                    "code": "calabash-{type}-dry"
+                },
+                "transitionRatio": 1
+            },
+            {
+                "type": "Perish",
+                "freshHours": { "avg": 216 },
+                "transitionHours": { "avg": 96 },
+                "transitionedStack": {
+                    "type": "item",
+                    "code": "game:rot"
+                },
+                "transitionRatioByType": {
+                    "calabash-small-*": 1,
+                    "*": 2
+                }
+            }
+        ]
+	},
+    groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 3.2
+	},
+	guiTransformByType: {
+        "*-small": {
+            translation: { x: 0, y: -5.8, z: 0 },
+            origin: { x: 0.5, y: 0.3, z: 0.5 },
+            scale: 2.8
+        },
+        "*": {
+            translation: { x: 0, y: -2.1, z: 0 },
+            origin: { x: 0.5, y: 0.3, z: 0.5 },
+            scale: 2.35
+        }
+	}
+}

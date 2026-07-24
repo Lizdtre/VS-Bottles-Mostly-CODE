@@ -1,0 +1,24 @@
+[
+    {
+        ingredientPattern: "b,w",
+        width: 1,
+        height: 2,
+        shapeless: true,
+        ingredients: {
+            "w": {
+                type: "item",
+                code: "game:beeswax"
+            },
+            "b": {
+                type: "block",
+                code: "calabashbottle-*-strung",
+                name: "type"
+            }
+
+        },
+        output: {
+            type: "block",
+            code: "calabashbottle-{type}-sealed"
+        }
+    }
+]

@@ -1,0 +1,48 @@
+[
+    {
+        ingredientPattern: "k,c",
+        width: 1,
+        height: 2,
+        shapeless: true,
+        ingredients: {
+            "k": {
+                type: "item",
+                code: "game:knife-*",
+                isTool: true
+            },
+            "c": {
+                type: "block",
+                code: "calabash-*-fresh",
+                allowedVariants: ["even", "tall", "squat"]
+            }
+        },
+        output: {
+            type: "item",
+            code: "calabashslice",
+            quantity: 4
+        }
+    },
+    {
+        ingredientPattern: "k,c",
+        width: 1,
+        height: 2,
+        shapeless: true,
+        ingredients: {
+            "k": {
+                type: "item",
+                code: "game:knife-*",
+                isTool: true
+            },
+            "c": {
+                type: "block",
+                code: "calabash-*-fresh",
+                allowedVariants: ["small"]
+            }
+        },
+        output: {
+            type: "item",
+            code: "calabashslice",
+            quantity: 2
+        }
+    }
+]
