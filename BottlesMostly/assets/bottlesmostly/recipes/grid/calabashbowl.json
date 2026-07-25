@@ -1,13 +1,9 @@
 [
     {
-        ingredientPattern: "w,b,k",
+        ingredientPattern: "b,k",
         width: 1,
-        height: 3,
+        height: 2,
         ingredients: {
-            "w": {
-                type: "item",
-                code: "game:beeswax"
-            },
             "b": {
                 type: "block",
                 code: "calabash-squat-dry",
@@ -26,14 +22,10 @@
         recipeGroup: 1
     },
     { // from crude bottle
-        ingredientPattern: "w,b,k",
+        ingredientPattern: "b,k",
         width: 1,
-        height: 3,
+        height: 2,
         ingredients: {
-            "w": {
-                type: "item",
-                code: "game:beeswax"
-            },
             "b": {
                 type: "block",
                 code: "calabashbottle-squat-strung",
