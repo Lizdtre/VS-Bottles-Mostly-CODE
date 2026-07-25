@@ -19,8 +19,15 @@
     "bottlesmostly:block-calabashbowl-empty": "Calabash bowl",
     "bottlesmostly:block-calabashbowl-meal": "Calabash bowl of {0}",
 
+    "bottlesmostly:block-handbooktitle-bottlesmostly:calabashbowl-empty": "Use",
+    "bottlesmostly:block-handbooktext-bottlesmostly:calabashbowl-empty": "See <a href=\"handbook://craftinginfo-mealcooking\">Meal making guide</a>. Fill by <hk>rightmouse</hk> clicking on a <a href=\"handbooksearch://ceramic cooking pot\">cooking pot</a>, <a href=\"handbooksearch://crock\">crock</a>, <a href=\"handbook://block-woodbucket\">bucket</a>, or other container with food or liquid inside (either while placed or in the inventory management screen, and also when on a shelf for meals). If you want to empty a bowl without eating the contents, simply toss it in some water!",
+
     "bottlesmostly:block-calabashcrock-empty": "Calabash crock",
     "bottlesmostly:block-calabashcrock-meal": "Calabash crock of {0}",
+
+    "bottlesmostly:block-handbooktitle-bottlesmostly:calabashcrock-empty": "Using",
+    "bottlesmostly:block-handbooktext-bottlesmostly:calabashcrock-empty": "Like <a href=\"handbooksearch://ceramic crock\">ceramic crocks</a>, calabash crocks can have portions removed or added by placing them on the ground, and then clicking on them with another container. Additionally, when on the ground crocks can be sealed by clicking on them with <a href=\"handbook://item-beeswax\">wax</a> or <a href=\"handbook://item-fat\">fat</a>. Both of these actions can also be done when the crock is on a shelf or within the inventory management screen.",
+
 
     "bottlesmostly:block-calabashbottle-*-strung": "Calabash bottle (unsealed)",
     "bottlesmostly:block-calabashbottle-*-sealed": "Calabash bottle",
@@ -51,5 +58,9 @@
 
     "bottlesmostly:item-calabashslice": "Calabash slice",
 
-    "game:tabname-bottlesmostly": "Bottles, Mostly"
+    "game:tabname-bottlesmostly": "Bottles, Mostly",
+    
+    
+    "bottlesmostly:survivalinfo-vessels-title": "Survival Mechanic: Drinking Vessels",
+    "bottlesmostly:survivalinfo-vessels-text": "<strong>Drinking Vessels</strong><br>When playing with a thirst mechanic enabled, it is crucial to know where to find drinkable water, and to stay within reasonable distance of it while exploring, which can be quite limiting to early game exploration.<br>To combat this, <i>Bottles, Mostly</i> adds a handfull of vessels obtainable earlier than the vanilla <a href=\"handbooksearch://ceramic jug\">ceramic jug</a>, that is, pre-pottery. They are as follows:<br><br><strong>Calabash Bottle</strong><br>Calabash, or bottle gourds, are vines found in warm and temperate climates. Their <a href=\"handbooksearch://fresh calabash\">fresh fruit</a> can be used as a cooking ingredient or be left to dry. When dried, it's exterior hardens and it's interior becomes hollow, making it useful as a vessel.<br>One vine may produce gourds ranging in shape and size. The larger gourds can be made into <a href=\"handbooksearch://calabash bottle unsealed\">crude bottles</a>, which can later be sealed with beeswax to make a permanent vessel, and upgraded with leather, for vanity. Additionally, some gourds can be made into <a href=\"handbook://block-bottlesmostly:calabashbowl-empty\">bowls</a> or <a href=\"handbook://block-bottlesmostly:calabashcrock-empty\">crocks</a>.<br><br><strong>Bamboo Bottle</strong><br>In climates where bamboo can be found, a very simple vessel can be made from one of its segments. These <a href=\"handbooksearch://bamboo bottle\">bamboo bottles</a> can't hold much liquid, however.<br><br><strong>Waterskin</strong><br>A crude vessel made from a tied up animal hide. This can be done through a <a href=\"handbook://block-bottlesmostly:waterskin-crude-curing\">rudimentary tanning method</a> using blackcurrants or blueberries (although you will need to wait for it to cure), or with the more familiar <a href=\"handbook://block-bottlesmostly:waterskin-crude-cured\">pelts</a>. Either way, this type of waterskin may not endure use for very long.<br>Once you've acquired leather, a more sophisticated <a href=\"handbooksearch://waterskin\">waterskin</a> can be made. It has a large, maybe unwieldy internal volume, but your <a href=\"handbook://gamemechanicinfo-mountableanimals\">animal mount</a> should be able to handle it."
 }

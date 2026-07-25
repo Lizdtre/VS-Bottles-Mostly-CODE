@@ -40,6 +40,11 @@
         groundStorageTransform: {
 			origin: { x: 0.5, y: 0, z: 0.5 },
 			scale: 0.85
+		},
+		handbook: {
+//			extraSections: [
+//				{ title: "bottlesmostly:block-handbooktitle-bottlesmostly:calabashbowl-empty", text: "bottlesmostly:block-handbooktext-bottlesmostly:calabashbowl-empty" }
+//			]
 		}
 	},
 	creativeinventory: { "general": ["*-empty"], "decorative": ["*-empty"], "bottlesmostly": ["*-empty"] },

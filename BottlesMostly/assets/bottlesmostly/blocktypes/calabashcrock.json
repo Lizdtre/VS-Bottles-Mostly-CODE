@@ -6,7 +6,7 @@
 		{ name: "RightClickPickup" }
 	],
 	variantgroups: [
-		{code: "type", states: ["empty"]} // ts wacky and weird
+		{code: "type", states: ["empty"]}
 	],
 	heldTpIdleAnimation: "holdbothhandslarge",
 	heldTpUseAnimation: "twohandplaceblock",
@@ -43,7 +43,10 @@
             "strawberry", "olive"
 		],
 		handbook: {
-			groupBy: ["calabashcrock-{type}"]
+			groupBy: ["calabashcrock-{type}"],
+//			extraSectionsByType: {"calabashcrock-empty":[
+//				{ title: "bottlesmostly:block-handbooktitle-bottlesmostly:calabashcrock-empty", text: "bottlesmostly:block-handbooktext-bottlesmostly:calabashcrock-empty" }
+//			]}
 		},
 		attachableToEntity: {
 			categoryCode: "pot",
@@ -63,7 +66,7 @@
                 size: { width: 5, height: 5, length: 5 },
                 randYRotAngle: 4
             }
-        }
+        },
 	},
 	doNotRenderAtLod2: true,
 	blockmaterial: "Wood",
