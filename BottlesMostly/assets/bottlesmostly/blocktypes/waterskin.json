@@ -47,17 +47,18 @@
 			},
 			"*": {
 				origin: { x: 0.5, y: 0, z: 0.5 },
-				scale: 1
+				scale: 1 // do not hide the chonk
 			}
 		},
 		onDisplayTransform: {
 			origin: { x: 0.5, y: 0, z: 0.5 },
-			scale: 0.75
+			scaleByType: {"waterskin-crude-*":0.75, "*": 1}
 		},
 		shelvableByType:{ "waterskin-crude-*": true, "*": "SingleCenter"},
-		onshelfTransform: {
-			scale: 0.9
-		},
+//		onshelfTransform: {
+//			scaleByType:{ "waterskin-crude-*":0.75, "*":1},
+//			translationByType:{ "waterskin-crude-*":{"x":0, "y":-0.125, "z": 0}}
+//		},
 		liquidContainerProps: {
 				capacityLitresByType:{"waterskin-crude-cured": 3, "waterskin-leather-*": 5},
 				transferSizeLitresByType: {"waterskin-crude-cured": 0.3, "waterskin-leather-*": 0.5},
@@ -72,8 +73,11 @@
         displayable: {
             shelfByType: {
 				"waterskin-leather-*": {
-					size: { width: 8, height: 3, length: 11 },
-					randYRotAngle: 5
+					size: { width: 12, height: 3, length: 8 }, // this is technically too small for the model but it was so close to fitting in cabinets i couldn't say no
+					randYRotAngle: 12, // i don't think this works when you set a rotation in the transform
+					transform: {
+						rotation: {"x":  0, "y": -90, "z":  0}
+					}
 				},
 				"*": {
 					size: { width: 6, height: 10, length: 6 },
@@ -92,7 +96,7 @@
 			}
 		},
 		handbook: {
-			groupBy: ["waterskin-{type}*"]
+			groupBy: ["waterskin-{type}-*"]
 		}
 	},
 	durabilityByType: {
@@ -160,7 +164,7 @@
 	},
 	guiTransformByType: {
 		"waterskin-leather-*": {
-			rotate: false,
+			rotate: false, // too chonk to rotationate
 			translation: { x: -7, y: 3, z: 0 },
 			rotation: { x: 99, y: -47, z: 180 },
 			origin: { x: 0.5, y: 0.3, z: 0.5 },
